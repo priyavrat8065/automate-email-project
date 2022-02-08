@@ -11,6 +11,7 @@ df = pd.read_excel("./emails.xlsx")
 recipient_email_ids = df['email_id'].to_list()
 
 for email_id in recipient_email_ids:
+    print(f"Send email to {email_id}")
     email_subject = input("Type email Subject\n")
     email_header = input(f"Type email header. For ex Hello/Dear <name of the person>,\n")
     email_body = input(f"Type the email body\n")
