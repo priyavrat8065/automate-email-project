@@ -1,10 +1,13 @@
 import pandas as pd
 import smtplib
 import openpyxl
- 
+from dotenv import load_dotenv
+from pathlib import Path
+import os
+load_dotenv(Path.home()/"environment-variables"/"config.env.txt")
 my_email = "testing8065@gmail.com"
 
-password = "12345678te"
+password = os.getenv("password")
 
 df = pd.read_excel("./emails.xlsx")
 
